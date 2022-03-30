@@ -7,7 +7,8 @@ public Integer getRaggioDiAzione() {
 	return raggioDiAzione;
 }
 
-public void setRaggioDiAzione(Integer raggioDiAzione) {
-	this.raggioDiAzione = raggioDiAzione;
+public int setRaggioDiAzione(Integer raggioDiAzione) {
+	return this.raggioDiAzione = raggioDiAzione;
 }
+
 }

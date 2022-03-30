@@ -9,6 +9,7 @@ private Boolean haBagagli;
 private Boolean haFiore;
 private Boolean haChampagne;
 private Boolean haGiornale;
+private StatoPasseggero statoPasseggero;
 public Integer getIdUnivoco() {
 	return idUnivoco;
 }
@@ -56,5 +57,11 @@ public Boolean getHaGiornale() {
 }
 public void setHaGiornale(Boolean haGiornale) {
 	this.haGiornale = haGiornale;
+}
+public StatoPasseggero getStatoPasseggero() {
+	return statoPasseggero;
+}
+public void setStatoPasseggero(StatoPasseggero statoPasseggero) {
+	this.statoPasseggero = statoPasseggero;
 }
 }
