@@ -2,14 +2,23 @@ package srl.neotech.aeroporto;
 
 import java.util.ArrayList;
 
-public class Aereo extends Modello{
+public class Aereo{
+
 	private Integer idUnivoco;
 	private Integer orario;
-	private CompagnieAeree compagniaAerea;
-    ArrayList<Passeggero> Passeggeri= new ArrayList<Passeggero>();
-	private Integer velocita;
-	private Integer distanzaDallAeroporto;
-	private  Stati stato;
+	private CompagniaAerea compagniaAerea;
+	private ModelloAereo modelloAereo;
+	private ArrayList<Passeggero>passeggeriAereo=new ArrayList<Passeggero>();
+	private Integer velocita;//da 1 a 10
+	private Integer distanzaDallAereoporto;//da 1 a 500
+	private StatoAereo statoAereo;
+	
+	public Aereo() {
+		modelloAereo=new ModelloAereo();
+
+	}
+	
+	
 	public Integer getIdUnivoco() {
 		return idUnivoco;
 	}
@@ -22,65 +31,80 @@ public class Aereo extends Modello{
 	public void setOrario(Integer orario) {
 		this.orario = orario;
 	}
-	public CompagnieAeree getCompagniaAerea() {
+	
+	public CompagniaAerea getCompagniaAerea() {
 		return compagniaAerea;
 	}
-	public void setCompagniaAerea(CompagnieAeree compagniaAerea) {
+
+
+	public void setCompagniaAerea(CompagniaAerea compagniaAerea) {
 		this.compagniaAerea = compagniaAerea;
 	}
 
-	@Override
-	public String getCostruttore() {
-		// TODO Auto-generated method stub
-		return super.getCostruttore();
+
+	public ModelloAereo getModelloAereo() {
+		return modelloAereo;
 	}
-	@Override
-	public void setCostruttore(String costruttore) {
-		// TODO Auto-generated method stub
-		super.setCostruttore(costruttore);
+	public void setModelloAereo(ModelloAereo modelloAereo) {
+		this.modelloAereo = modelloAereo;
 	}
-	@Override
-	public Integer getCodiceModello() {
-		// TODO Auto-generated method stub
-		return super.getCodiceModello();
+	public ArrayList<Passeggero> getPasseggeriAereo() {
+		return passeggeriAereo;
 	}
-	@Override
-	public void setCodiceModello(Integer codiceModello) {
-		// TODO Auto-generated method stub
-		super.setCodiceModello(codiceModello);
-	}
-	@Override
-	public Integer getCapienzaNumPasseggeri() {
-		// TODO Auto-generated method stub
-		return super.getCapienzaNumPasseggeri();
-	}
-	@Override
-	public void setCapienzaNumPasseggeri(Integer capienzaNumPasseggeri) {
-		// TODO Auto-generated method stub
-		super.setCapienzaNumPasseggeri(capienzaNumPasseggeri);
-	}
-	public ArrayList<Passeggero> getPasseggeri() {
-		return Passeggeri;
-	}
-	public void setPasseggeri(ArrayList<Passeggero> passeggeri) {
-		Passeggeri = passeggeri;
+	public void setPasseggeriAereo(ArrayList<Passeggero> passeggeriAereo) {
+		this.passeggeriAereo = passeggeriAereo;
 	}
 	public Integer getVelocita() {
 		return velocita;
 	}
 	public void setVelocita(Integer velocita) {
-		this.velocita = velocita;
+		this.velocita = velocita+velocita;
+//		if(velocita==distanzaDallAereoporto && velocita==getRaggioDiAzione()) {
+//			setStatoAereo(StatoAereo.IN_PARTENZA);
+//			velocita++;
+//		}
+//		if(velocita<distanzaDallAereoporto|| velocita<getRaggioDiAzione() ) {
+//			setStatoAereo(StatoAereo.DECOLLATO);
+//			velocita++;
+//		}
+//		if(velocita>getDistanzaDallAereoporto() && velocita>getRaggioDiAzione()) {
+//			setStatoAereo(StatoAereo.FUORI_SPAZIO_AEREO);
+//			velocita++;
+//		}
+//		if(velocita<getDistanzaDallAereoporto() || velocita<getRaggioDiAzione()) {
+//			setStatoAereo(StatoAereo.IN_AVVICINAMENTO);
+//			velocita--;
+//		}
+//		if(velocita==getDistanzaDallAereoporto() && velocita==getRaggioDiAzione()) {
+//			setStatoAereo(StatoAereo.ATTERRATO);
+//			velocita--;
+//		}
 	}
-	public Integer getDistanzaDallAeroporto() {
-		return distanzaDallAeroporto;
+	public Integer getDistanzaDallAereoporto() {
+		return distanzaDallAereoporto;
 	}
-	public void setDistanzaDallAeroporto(Integer distanzaDallAeroporto) {
-		this.distanzaDallAeroporto = distanzaDallAeroporto;
+	public void setDistanzaDallAereoporto(Integer distanzaDallAereoporto) {
+		this.distanzaDallAereoporto =distanzaDallAereoporto;
 	}
-	public Stati getStato() {
-		return stato;
+	public StatoAereo getStatoAereo() {
+		return statoAereo;
 	}
-	public void setStato(Stati stato) {
-		this.stato = stato;
+	public void setStatoAereo(StatoAereo statoAereo) {
+		this.statoAereo = statoAereo;
 	}
+	
+	
+
+	@Override
+	public String toString() {
+	return "[ID]:"+this.getIdUnivoco()+"[ORARIO]:"+this.getOrario()+"[STATO]"+this.statoAereo+"[COMPAGNIA AEREA]:"+this.getCompagniaAerea()+"[COSTRUTTORE]:"+
+	this.getModelloAereo().getCostruttore()+"[CODICE MODELLO]:"+this.getModelloAereo().getCodiceModello()+"[CAPIENZA AEREO/PASSEGGERI]:"
+			+this.getModelloAereo().getCapienzaNumeroPasseggeri()+"[VELOCITÀ]:"+this.getVelocita()+"[DISTANZA DALL'AEREOPORTO]:"+this.getDistanzaDallAereoporto()+"--"+this.getPasseggeriAereo();
+	}
+	
+	
+	
+	
+	
+	
 }
