@@ -5,9 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="static/css/MyCss.css"/>
-<h1 class="titolo">Lotus Field Combo Decklist</h1>
+<title></title>
 </head>
 <body>
+<h1 class="titolo">Lotus Field Combo Decklist</h1>
 <img src="https://cdn1.mtggoldfish.com/images/h/Lotus-Field-M20-265.jpg">
 </body>
 </html>
