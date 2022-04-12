@@ -9,7 +9,7 @@ public class ViewController {
 
 	@RequestMapping(value="/test", method = RequestMethod.GET)
 	public String test() {
-		return "test";
+		return "test_form";
 	}
 	
 	@RequestMapping(value="/ajax", method = RequestMethod.GET)

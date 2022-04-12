@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
@@ -13,10 +13,10 @@
 <body>
 <div class="p-2">
 <form:form id="form_test" action="inviodati_get" method="POST" modelAttribute="mapping_dati">
- <input  id="username" path="username"  class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"/>
- <input  id="email" path="email"  class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1"/>
-  <input  id="password" path="password"  class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1"/>
-<button  type="submit" id="bth-search" class="btn btn-primary btn-lg float-right">Invio Dati</button>
+ <form:input  id="username" path="username"  class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"/>
+ <form:input  id="email" path="email"  class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1"/>
+  <form:input  id="password" path="password"  class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1"/>
+<form:button  type="submit" id="bth-search" class="btn btn-primary btn-lg float-right">Invio Dati</form:button>
 </form:form>
 </div>
 </body>

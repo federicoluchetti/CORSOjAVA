@@ -10,8 +10,9 @@
 		FL_ Federico
 		SP_ Simone
 		MP_ Mauro
+		EL_ Eros
 	 -->
-	<artifactId>FL_WebApp02</artifactId>
+	<artifactId>FL_WebAppForm</artifactId>
 	<version>0.0.1</version>
 	<packaging>war</packaging>
 
@@ -51,7 +52,6 @@
 				<filtering>true</filtering>
 				<excludes>
 					<exclude>**/conf.properties</exclude>
-			
 				</excludes>
 			</resource>
 		</resources>

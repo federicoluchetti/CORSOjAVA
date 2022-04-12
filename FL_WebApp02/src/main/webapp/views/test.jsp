@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link href=”https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css” rel=”stylesheet”>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
 
@@ -50,9 +50,8 @@
   <li class="list-group-item d-flex justify-content-between align-items-start">
     <div class="ms-2 me-auto">
       <div class="fw-bold">Barkchannel Pathway</div>
-      <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="<img src="https://www.mtgpics.com/pics/big/khm/251.jpg">">
-  Show image
-</button>
+ <img src="https://www.mtgpics.com/pics/big/khm/251.jpg">
+
       
     </div>
     <span class="badge bg-primary rounded-pill">1</span>
@@ -239,6 +238,6 @@
  
 
 
-<script src=”https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js”></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
