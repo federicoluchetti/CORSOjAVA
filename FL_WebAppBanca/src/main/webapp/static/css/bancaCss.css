@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+
+
+
+
+
+
+
+
+
+
+.home{
+	display:flex;
+	flex-flow:row;
+	  border-radius: 25px;
+  background: #73AD21;
+  padding: 20px;
+  width: 200px;
+  position: relative;
+  top: 100px;
+  right: -100px;
+  justify-content: center;
+}
+
+
+.nav-item{
+
+	padding: 1em;
+	margin:1em;
+
+}

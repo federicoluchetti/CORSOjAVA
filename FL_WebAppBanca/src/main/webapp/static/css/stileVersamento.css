@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+body{
+	background-color: red;
+}
+
+
+
+.label-group{
+	display:flex;
+	margin:0;
+	padding:0;
+	justify-content: space-around;
+}
+.form-range{
+	width: 100%;
+}
+.form-control{
+
+	
+	width: 100%;
+}
