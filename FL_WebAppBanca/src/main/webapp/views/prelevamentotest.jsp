@@ -14,27 +14,28 @@
 <h1 class="text-center text-right fs-1"><strong>Neotech Bank</strong></h1>
 </div>
 
-<form class="row row-cols-lg-auto g-3 align-items-top" id="form_user" action="prelievo_get" method="POST" modelAttribute="mapping_dati">
+<form:form class="row row-cols-lg-auto g-3 align-items-top" id="form_user" action="prelievo_get" method="POST" modelAttribute="mapping_dati">
   <div class="col-12">
-    <label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
+    <form:label class="visually-hidden" for="inlineFormInputGroupUsername">Username</form:label>
     <div class="input-group">
       <div class="input-group-text">@</div>
-      <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Nominativo">
+      <form:input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Nominativo">
     </div>
   </div>
   <div class="btn-group-vertical me-2" role="group" aria-label="First group">
-    <button type="button" class="btn btn-outline-secondary">25</button>
-    <button type="button" class="btn btn-outline-secondary">50</button>
-    <button type="button" class="btn btn-outline-secondary">100</button>
-    <button type="button" class="btn btn-outline-secondary">altro importo</button> <input type="altroimporto" class="form-control" id="inlineFormInputNumber" placeholder="importo">
+    <form:button type="button" class="btn btn-outline-secondary">25</form:button>
+    <form:button type="button" class="btn btn-outline-secondary">50</form:button>
+    <form:button type="button" class="btn btn-outline-secondary">100</form:button>
+    <form:button type="button" class="btn btn-outline-secondary">altro importo</form:button>
+    <form:input type="altroimporto" class="form-control" id="inlineFormInputNumber" placeholder="importo">
   </div>
 
   <div class="col-12">
-    <button type="submit"  id="bth-search" class="btn btn-primary">Invia</button>
+    <form:button type="submit"  id="bth-search" class="btn btn-primary">Invia</form:button>
   </div>
 
 
-</form>
+</form:form>
 
 
 

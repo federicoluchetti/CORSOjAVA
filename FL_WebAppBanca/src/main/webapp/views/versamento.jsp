@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +7,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="static/css/bancaCss.css"/>
 <link rel="stylesheet" type="text/css" href="static/css/stileVersamento.css"/>
-<title>Home</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<title>Versamento</title>
 </head>
 <body>
 <div class="titolo">
@@ -14,45 +16,45 @@
 </div>
 
 
-<form class="row row-cols-lg-auto g-3 align-items-center" id="form_user" action="inviodati_get" method="POST" modelAttribute="mapping_dati">
+<form class="row row-cols-lg-auto g-3 align-items-center" id="form_user" action="inviovers_get" method="POST" modelAttribute="mapping_dati">
   <div class="col-12">
-    <label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
+    <form:label class="visually-hidden" for="inlineFormInputGroupUsername">Username</form:label>
     <div class="input-group">
       <div class="input-group-text">@</div>
-      <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Nominativo">
+      <form:input type="text" class="form-control" path="username" id="inlineFormInputGroupUsername" placeholder="Nominativo">
     </div>
   </div>
 
   <div class="col-12">
-    <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-    <select class="form-select" id="inlineFormSelectPref">
-      <option selected>Taglio</option>
-      <option value="1">10 Euro</option>
-      <option value="2">20 Euro</option>
-      <option value="3">50 Euro</option>
-    </select>
+    <form:label class="visually-hidden" for="inlineFormSelectPref">Preference</form:label>
+    <form:select class="form-select" id="inlineFormSelectPref" path="taglio">
+      <form:option selected>Taglio</form:option>
+      <form:option value="1">10 Euro</form:option>
+      <form:option value="2">20 Euro</form:option>
+      <form:option value="3">50 Euro</form:option>
+    </form:select>
   </div>
 
-  <div class="col-12">
-  <label for="customRange2" class="form-label">Quantità</label>
+  <form:div class="col-12">
+  <form:label for="customRange2" class="form-label">Quantità</form:label>
 
-<input type="range" class="form-range" min="0" max="100" id="customRange2">
+<form:input type="range" class="form-range" min="0" max="100" id="customRange2" path="quantita">
 
-<div class="label-group">
-<label for="customRange2" class="form-label">1</label>
+<form:div class="label-group">
+<form:label for="customRange2" class="form-label">1</form:label>
 
-<label for="customRange2" class="form-label">100</label>
+<form:label for="customRange2" class="form-label">100</form:label>
 
 </div>
     </div>
   </div>
 
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Invia</button>
+    <form:button type="submit" class="btn btn-primary">Invia</form:button>
   </div>
 
 
-</form>
+</form:form>
 
 
 
