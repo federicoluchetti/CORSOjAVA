@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-UTENTE: <c:out value="${username}"></c:out>
-QUANTITÀ: <c:out value="${quantità}"></c:out>
-TAGLIO: <c:out value="${taglio}"></c:out>
+ <c:out value="${nominativo}"></c:out>
+ <c:out value="${altroimporto}"></c:out>
+
 </body>
 </html>

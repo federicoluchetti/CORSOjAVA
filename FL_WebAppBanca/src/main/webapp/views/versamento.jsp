@@ -27,7 +27,7 @@
 
   <div class="col-12">
     <form:label class="visually-hidden" for="inlineFormSelectPref">Preference</form:label>
-    <form:select class="form-select" id="inlineFormSelectPref" path="taglio">
+    <form:select class="form-select" id="taglio" path="taglio">
       <form:option selected>Taglio</form:option>
       <form:option value="1">10 Euro</form:option>
       <form:option value="2">20 Euro</form:option>

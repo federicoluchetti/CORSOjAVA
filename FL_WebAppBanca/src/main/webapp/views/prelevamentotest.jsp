@@ -16,18 +16,18 @@
 
 <form:form class="row row-cols-lg-auto g-3 align-items-top" id="form_user" action="prelievo_get" method="POST" modelAttribute="mapping_dati">
   <div class="col-12">
-    <form:label class="visually-hidden" for="inlineFormInputGroupUsername">Username</form:label>
+    <label class="visually-hidden">Username</label>
     <div class="input-group">
       <div class="input-group-text">@</div>
-      <form:input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Nominativo">
+      <form:input type="text" class="form-control" id="nominativo" path="nominativo" placeholder="Nominativo"/>
     </div>
   </div>
   <div class="btn-group-vertical me-2" role="group" aria-label="First group">
-    <form:button type="button" class="btn btn-outline-secondary">25</form:button>
-    <form:button type="button" class="btn btn-outline-secondary">50</form:button>
-    <form:button type="button" class="btn btn-outline-secondary">100</form:button>
-    <form:button type="button" class="btn btn-outline-secondary">altro importo</form:button>
-    <form:input type="altroimporto" class="form-control" id="inlineFormInputNumber" placeholder="importo">
+    <button type="button" class="btn btn-outline-secondary">25</button>
+    <button type="button" class="btn btn-outline-secondary">50</button>
+    <button type="button" class="btn btn-outline-secondary">100</button>
+    <button type="button" class="btn btn-outline-secondary">altro importo</button>
+    <form:input type="text" class="form-control" id="altroimporto" path="altroimporto" placeholder="importo"/>
   </div>
 
   <div class="col-12">

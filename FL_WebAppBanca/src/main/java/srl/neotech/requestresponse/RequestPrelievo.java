@@ -1,20 +1,13 @@
 package srl.neotech.requestresponse;
 
 public class RequestPrelievo {
-private String username;
-private String importo;
+private String nominativo;
 private String altroImporto;
-public String getUsername() {
-	return username;
+public String getNominativo() {
+	return nominativo;
 }
-public void setUsername(String username) {
-	this.username = username;
-}
-public String getImporto() {
-	return importo;
-}
-public void setImporto(String importo) {
-	this.importo = importo;
+public void setNominativo(String nominativo) {
+	this.nominativo = nominativo;
 }
 public String getAltroImporto() {
 	return altroImporto;
@@ -22,5 +15,4 @@ public String getAltroImporto() {
 public void setAltroImporto(String altroImporto) {
 	this.altroImporto = altroImporto;
 }
-
 }

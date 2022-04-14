@@ -62,12 +62,10 @@ public class ViewController {
 	
 	@RequestMapping(value="/prelievo_get", method = RequestMethod.POST)
 	public String inviovprelievo(@ModelAttribute ("mapping_dati")RequestPrelievo dati_in_input, Model model) {
-		System.out.println(dati_in_input.getUsername());
-		System.out.println(dati_in_input.getImporto());
+		System.out.println(dati_in_input.getNominativo());
 		System.out.println(dati_in_input.getAltroImporto());
-		model.addAttribute("username", dati_in_input.getUsername());
-		model.addAttribute("taglio", dati_in_input.getImporto());
-		model.addAttribute("quantità", dati_in_input.getAltroImporto());
+		model.addAttribute("nominativo", dati_in_input.getNominativo());
+		model.addAttribute("altroimporto", dati_in_input.getAltroImporto());
 		return "testBanca";
 	}
 	
