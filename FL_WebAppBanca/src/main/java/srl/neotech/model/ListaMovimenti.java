@@ -59,4 +59,17 @@ public String getAzioni() {
 public void setAzioni(String azioni) {
 	this.azioni = azioni;
 }
+
+public boolean equals(ListaMovimenti obj) {
+	if (obj ==null) return false;
+	if (obj ==this) return true;
+	if (!(obj instanceof ListaMovimenti)) return false;
+	ListaMovimenti o = (ListaMovimenti) obj ;
+	return o.Id == this.Id;
+	
+	
+
+
+
+}
 }

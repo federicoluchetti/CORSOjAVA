@@ -1,5 +1,7 @@
 package srl.neotech.controllers;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.UUID;
 
 import org.springframework.stereotype.Controller;
@@ -9,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import srl.neotech.model.ListaMovimenti;
+import srl.neotech.model.SingleListaMovimenti;
+import srl.neotech.requestresponse.ListaMovimentiResponse;
+import srl.neotech.requestresponse.RequestEliminaVoce;
 import srl.neotech.requestresponse.RequestPrelievo;
 import srl.neotech.requestresponse.RequestVersamento;
 
@@ -29,13 +34,19 @@ public class ViewController {
 		return "home";
 	}
 	@RequestMapping(value="/lista", method = RequestMethod.GET)
-	public String lista(Model model) {
+	public String listam(Model model) {
 
 		return "lista_movimenti";
 	}
-		
+	
+	LocalDateTime myDateObj= LocalDateTime.now();
+	DateTimeFormatter myFormtObj=DateTimeFormatter.ofPattern("E, MMM dd yyyy HH:mm:ss");
+	String formattedDate = myDateObj.format(myFormtObj);
+	
+	
+	
 		@RequestMapping(value="/genera_lista", method = RequestMethod.GET)
-		public String listaMov(Model model) {
+		public String generalista(Model model) {
 			for (int i=0;i<50;i++){
 				ListaMovimenti lista=new ListaMovimenti();
 				lista.setId(UUID.randomUUID().toString());
@@ -45,9 +56,40 @@ public class ViewController {
 				lista.setTaglio(i);
 				lista.setQuantità(i);
 				lista.setTotale(i);
+				SingleListaMovimenti.getInstance().getListeMovimenti().add(lista);
 			}
-			return "lista_movimenti";
+			model.addAttribute("numeroMovimentiGenerati", SingleListaMovimenti.getInstance().getListeMovimenti().size());
+			return "genera-movimenti";
 	}
+		
+		
+		@RequestMapping(value="/listamovimenti", method = RequestMethod.GET)
+		public String listamovimenti(Model model) {
+			ListaMovimentiResponse response = new ListaMovimentiResponse();
+			response.setListaMovimentiRestituti(SingleListaMovimenti.getInstance().getListeMovimenti());
+			 model.addAttribute("responseMovimenti", response);
+			return "listamovimenti";
+		}
+		
+	
+		
+		
+		@RequestMapping(value="/elimina-voce", method = RequestMethod.GET)
+		public String geliminavoce(@ModelAttribute  RequestEliminaVoce dati_in_input, Model model) {
+			System.out.println("dati lista: " + dati_in_input.getId());
+		SingleListaMovimenti.getInstance().getListeMovimenti().removeIf(ListaMovimenti->ListaMovimenti.getId().equals(dati_in_input.getId()));
+			
+			ListaMovimentiResponse response= new ListaMovimentiResponse();
+			response.setListaMovimentiRestituti(SingleListaMovimenti.getInstance().getListeMovimenti());
+			model.addAttribute("responseLista", response);
+			
+			return "listamovimenti";}
+		
+		
+
+		
+		
+		
 	@RequestMapping(value="/prelevamento", method = RequestMethod.GET)
 	public String prelevamento(Model model) {
 		return "prelevamento";
