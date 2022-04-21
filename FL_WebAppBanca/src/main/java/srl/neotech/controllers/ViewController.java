@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import srl.neotech.model.ListaMovimenti;
+import srl.neotech.model.Movimento;
 import srl.neotech.model.SingleListaMovimenti;
 import srl.neotech.requestresponse.ListaMovimentiResponse;
 import srl.neotech.requestresponse.RequestEliminaVoce;
@@ -48,7 +48,7 @@ public class ViewController {
 		@RequestMapping(value="/genera_lista", method = RequestMethod.GET)
 		public String generalista(Model model) {
 			for (int i=0;i<50;i++){
-				ListaMovimenti lista=new ListaMovimenti();
+				Movimento lista=new Movimento();
 				lista.setId(UUID.randomUUID().toString());
 				lista.setData(null);
 				lista.setOperazione(null);

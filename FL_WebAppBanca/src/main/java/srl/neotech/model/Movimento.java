@@ -2,7 +2,7 @@ package srl.neotech.model;
 
 import java.sql.Date;
 
-public class ListaMovimenti {
+public class Movimento {
 private String Id;
 private Date data;
 private String operazione;
@@ -60,11 +60,11 @@ public void setAzioni(String azioni) {
 	this.azioni = azioni;
 }
 
-public boolean equals(ListaMovimenti obj) {
+public boolean equals(Movimento obj) {
 	if (obj ==null) return false;
 	if (obj ==this) return true;
-	if (!(obj instanceof ListaMovimenti)) return false;
-	ListaMovimenti o = (ListaMovimenti) obj ;
+	if (!(obj instanceof Movimento)) return false;
+	Movimento o = (Movimento) obj ;
 	return o.Id == this.Id;
 	
 	

@@ -4,13 +4,13 @@ public class SingleListaMovimenti {
 
 	private static SingleListaMovimenti instance=null;
 
-	ArrayList<ListaMovimenti> ListeMovimenti = new ArrayList<ListaMovimenti>();
+	ArrayList<Movimento> ListeMovimenti = new ArrayList<Movimento>();
 
-	public ArrayList<ListaMovimenti> getListeMovimenti() {
+	public ArrayList<Movimento> getListeMovimenti() {
 		return ListeMovimenti;
 	}
 
-	public void setListeMovimenti(ArrayList<ListaMovimenti> listeMovimenti) {
+	public void setListeMovimenti(ArrayList<Movimento> listeMovimenti) {
 		this.ListeMovimenti = listeMovimenti;
 	}
 

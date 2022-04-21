@@ -2,17 +2,17 @@ package srl.neotech.requestresponse;
 
 import java.util.ArrayList;
 
-import srl.neotech.model.ListaMovimenti;
+import srl.neotech.model.Movimento;
 
 public class ListaMovimentiResponse {
 
-	ArrayList<ListaMovimenti> listaMovimentiRestituiti = new ArrayList<ListaMovimenti>();
+	ArrayList<Movimento> listaMovimentiRestituiti = new ArrayList<Movimento>();
 
-	public ArrayList<ListaMovimenti> getListaMovimentiRestituti() {
+	public ArrayList<Movimento> getListaMovimentiRestituti() {
 		return listaMovimentiRestituiti;
 	}
 
-	public void setListaMovimentiRestituti(ArrayList<ListaMovimenti> listaMovimentiRestituti) {
+	public void setListaMovimentiRestituti(ArrayList<Movimento> listaMovimentiRestituti) {
 		this.listaMovimentiRestituiti = listaMovimentiRestituti;
 	}
 }
